@@ -31,7 +31,7 @@ reducing computational complexity.
 - NMSE is used for reconstruction quality; FLOPs/parameters measure complexity.
 - DCRNet-$1\times$ reduces FLOPs by 26%/21%/12% versus CsiNet/CRNet/ACRNet-$1\times$ at $\eta=1/4$ and achieves the best
   indoor NMSE among low-complexity models.
-- DCRNet-$10\times$ provides near-SOTA NMSE with ~7M fewer FLOPs than CsiNet$+$ and ACRNet-$10\times$ at multiple
+- DCRNet-$10\times$ provides near-SOTA NMSE with ~7M fewer FLOPs than CsiNet+ and ACRNet-$10\times$ at multiple
   compression rates.
 
 ## Requirements
