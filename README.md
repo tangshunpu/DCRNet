@@ -25,7 +25,7 @@ reducing computational complexity.
 - COST2100 dataset, indoor (5.3 GHz) and outdoor (300 MHz) scenarios.
 - $N_t=32$ antennas, $N_c=1024$ sub-carriers, truncated to $2 \times 32 \times 32$ CSI in the angular-delay domain.
 - Train/val/test splits: 100,000 / 30,000 / 20,000 samples.
-- Training: Kaiming initialization, Adam optimizer, cosine annealing LR ($5e-5$ to $2e-3$), $T_w=30$, $T=2500$.
+- Training: Kaiming initialization, Adam optimizer, cosine annealing LR ($5 \times 10^{-5}$ to $2 \times 10^{-3}$), $T_w=30$, $T=2500$.
 
 ### Evaluation and results summary
 - NMSE is used for reconstruction quality; FLOPs/parameters measure complexity.
