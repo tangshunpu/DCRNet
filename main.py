@@ -313,7 +313,7 @@ def evaluator(sparse_pred, sparse_gt, raw_gt):
         sparse_pred = sparse_pred.permute(0, 2, 3, 1)  # Move the real/imaginary dim to the last
         zeros = sparse_pred.new_zeros((n, nt, nc_expand - nc, 2))
         sparse_pred = torch.cat((sparse_pred, zeros), dim=2)
-        raw_pred = torch.fft(sparse_pred,signal_ndim=1)[:, :, :125, :]
+        raw_pred = torch.view_as_real(torch.fft.fft(torch.view_as_complex(sparse_pred.contiguous()), dim=-1))[:, :, :125, :]
 
         norm_pred = raw_pred[..., 0] ** 2 + raw_pred[..., 1] ** 2
         norm_pred = torch.sqrt(norm_pred.sum(dim=1))
